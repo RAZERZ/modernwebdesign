@@ -1,0 +1,319 @@
+#content {
+    max-width: unset;
+    margin: 10% 0 0 0 !important;
+    padding: unset;
+}
+
+#site-header .region {
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 8;
+}
+
+.region.first-region.has-ace-text-block {
+    background: rgba(0,0,0,.85);
+    border-bottom: solid 1px;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+}
+
+#content, #site-footer .wrapper, #site-header .wrapper {
+    max-width: unset;
+    margin: unset;
+    padding: unset;
+}
+
+#shop-logo {
+    -webkit-transition:  .3s ease;
+    -moz-transition:  .3s ease;
+    -ms-transition:  .3s ease;
+    -o-transition:  .3s ease;
+    transition:  .3s ease;
+    width: 355px;
+    height: auto;
+    margin-top: 10px;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+#home {
+    height: auto;
+    width: 355px;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.modeSwitcher {
+    position: absolute;
+    top: 35%;
+    right: 3%;
+    width: 6%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.modeSwitcher.light {
+    background: white;
+    color: black;
+}
+
+.modeSwitcher.light:after {
+    content: '\263D';
+}
+
+.modeSwitcher.dark {
+    background: #484848;
+    color: white;
+}
+
+.modeSwitcher.dark:after {
+    content: "\263C";
+}
+
+.block.ace-text-block.block-93 {
+    position:  absolute;
+    right: 10%;
+    top: 35%;
+}
+
+#site-header .first-region .cart-block, #site-header .first-region .menu-block.custom, #site-header .first-region .search-block {
+    position:  absolute;
+    right: 20%;
+    top: 25%;
+    z-index: 9;
+    left:  unset;
+}
+
+#site-header nav.category {
+    margin-top: 60px;
+    height: 55px;
+    background: #0278c1;
+    position: fixed;
+    z-index: 9;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+    padding: 0 40px 0 20px;
+}
+
+.searchBtnToggle {
+    position: absolute;
+    right: 20px;
+    color: white;
+    top: 0;
+}
+
+#content-sidebar nav ul li, #site-header nav.category ul li {
+    margin-right: 1%;
+    float:left;
+}
+
+#content-sidebar nav a.load-tree.has-children:after , #site-footer nav.category a.load-tree.has-children:after, #site-header nav.category a.load-tree.has-children:after {
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    content: "";
+    margin-left: 3px;
+    margin-bottom: 3px;
+}
+
+#content-sidebar nav a.load-tree.has-children:before, #site-footer nav.category a.load-tree.has-children:before, #site-header nav.category a.load-tree.has-children:before, #content-sidebar nav ul li a:before, #site-header nav.category ul li a:before {
+    content: none;
+}
+
+.theme-color-scheme-2 #content-sidebar nav a, .theme-color-scheme-2 #content-sidebar nav a.load-tree.has-children, .theme-color-scheme-2 #site-footer nav a, .theme-color-scheme-2 #site-header nav.category a, .theme-color-scheme-2 #site-header nav.category a.load-tree.has-children {
+    padding-right: 1px;
+}
+
+.theme-color-scheme-2 #content-sidebar nav a, .theme-color-scheme-2 #content-sidebar nav a.load-tree.has-children, .theme-color-scheme-2 #site-footer nav a, .theme-color-scheme-2 #site-header nav.category a, .theme-color-scheme-2 #site-header nav.category a.load-tree.has-children {
+    color: white !important;
+}
+
+ul.menu.menu-level-1.category-menu {
+    height: 100%;
+    background: #0278c1 !important;
+}
+
+ul.menu.menu-level-2 {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    -webkit-transform: translateY(-2em);
+    -moz-transform: translateY(-2em);
+    -ms-transform: translateY(-2em);
+    -o-transform: translateY(-2em);
+    transform: translateY(-2em);
+    -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    -moz-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    -ms-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    -o-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    background-color: rgba(0,0,0,.9) !important;
+    margin-top: 1px !important;
+    width: 50%;
+}
+
+ul.menu.menu-level-2 li {
+    margin: 0;
+    clear: both;
+}
+
+ul.menu.menu-level-2 li a {
+    margin-bottom: 10px;
+    text-indent: 0;
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -ms-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+}
+
+ul.menu.menu-level-2 li a:first-child {
+    margin-top: 10px;
+}
+
+.dropDownMenuAd {
+    position: absolute;
+    right: 0;
+    width: 20%;
+    height: 95%;
+    background: white;
+    margin-top: .5% !important;
+}
+
+ul.menu.menu-level-2 li a:hover {
+    text-indent: 5px;
+}
+
+li.menu-item.menu-item-187.menu-level-1-item.menu-item-has-children-loaded.selected.has-children.menu-item-has-children.menu-item-has-title-without-link:hover ul.menu.menu-level-2, ul.menu.menu-level-2:hover {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition: s, 0s, 0.3s;
+    -moz-transition: s, 0s, 0.3s;
+    -ms-transition: s, 0s, 0.3s;
+    -o-transition: s, 0s, 0.3s;
+    transition: s, 0s, 0.3s;
+}
+
+.block.search-block.block-91.searchfield {
+    margin: 0;
+    height: 60%;
+    -webkit-transform: translateY(-2em);
+    -moz-transform: translateY(-2em);
+    -ms-transform: translateY(-2em);
+    -o-transform: translateY(-2em);
+    transform: translateY(-2em);
+    -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    -moz-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    -ms-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    -o-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    opacity: 0;
+    visibility: hidden;
+    z-index:  -1;
+}
+
+.region.last-region.has-menu-block.has-ace-text-block.has-cart-block.has-search-block {
+    z-index: 7 !important;
+}
+
+.slideshow-container {
+    position: relative;
+}
+
+.slideshow-controls {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    color: #fff;
+    text-align: center;
+}
+
+.slideshow-btn {
+    float: left;
+    position: absolute;
+    font-size: 200%;
+    bottom: 45%;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-left:hover {
+    color: grey;
+}
+
+.btn-right {
+    right: 0;
+}
+
+.btn-right:hover {
+    color: grey;
+}
+
+.slideshow-imgIndexCircle {
+    height: 13px;
+    width: 13px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 18px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.slideshow-imgIndexCircle:hover {
+    background-color: #ccc;
+}
+
+.currIndexWhite {
+    background-color: white;
+}
+
+.animate-opacity {
+    animation:opac 0.8s
+}
+@keyframes opac {
+    from {
+        opacity:0
+    }
+    to {
+        opacity:1
+    }
+}

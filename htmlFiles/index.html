@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html id="start-page" class="no-js incl-vat  has-sidebar theme-color-scheme-2 theme-background-pattern-0" lang="sv" dir="ltr">
+    <head>
+        <meta charset="UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+        <title>Data-Butiken.com - Din kompletta IT leverantör av datorer, gaming, uppgradering &amp; service</title>
+        <meta name="description" content="Vill Du att vi installerar PC-komponenter åt dig i Din dator - när du uppgraderar eller köper ny hårdvara hos oss. Tjänsten ingår när du köper en komplett dator av oss!" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../staticFiles/shop.combined.min.css" />
+        <link rel="stylesheet" href="../staticFiles/theme-plugins.combined.min.css" />
+        <link rel="stylesheet" href="../staticFiles/theme.min.css" />
+        <link rel="stylesheet" href="../customFiles/shop-custom.min.css" />
+            </head>
+    <body>
+    <div id="page-container">
+    <header id="site-header">
+        <div class="wrapper">
+            <div class="content">
+                <div class="main-content">
+                    <div class="region first-region has-ace-text-block" data-region="headerTop" >
+                        <a href="https://www.data-butiken.com" id="home"><img id="shop-logo" src="../logo/0originaldatabutikenlogo_dup1.png" alt="Databutiken i Karlstad" width="676" height="112" /></a>
+                        <div class="block ace-text-block block-93">
+                            <a href="/customer" class="loggain">Mitt Konto</a>
+                        </div>
+                        <div class="block ace-text-block block-94 modeSwitcher light">
+                            <span class="modeSwitcherSpan">Nattläge</span>
+                        </div>
+                        <div class="block cart-block block-34">
+                            <div class="cart-wrap empty-cart">
+
+                                <a class="header cart-header" href="/checkout">
+                                    <span class="cart-title">Kundvagn</span>
+                                    <span class="cart-item-count quantity"><span class="number">0</span><span class="unit">st</span></span>
+                                    <span class="cart-sum-label">Totalt</span>
+                                    <span class="price zero"><span class="amount">0</span><span class="currency"> kr</span></span>
+                                    <span class="cart-icon" data-item-count="0"></span>
+                                </a>
+
+                                <div class="cart-content">
+                                    <span class="empty-cart-message">Kundvagnen är tom.</span>
+                                    <ul class="items shopping-cart">
+                                        <li class="cart-subtotal shopping-cart-subtotal">
+                                            <span class="caption">Totalt</span>
+                                            <span class="price zero"><span class="amount">0</span><span class="currency"> kr</span></span>
+                                        </li>
+                                    </ul>
+                                    <p class="footer cart-footer">
+                                        <a href="#" class="cart-content-close">Stäng</a>
+                                        <a href="/checkout" class="checkout-link">Till kassan</a>
+                                    </p>
+
+                                </div><!-- /.cart-content -->
+                            </div><!-- /.cart-wrap -->
+                        </div> <!-- /.cart-block -->
+                        <div class="block ace-text-block block-149">
+    <style>
+    .isCheckout {
+        display: none;
+        background-color: #c00;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        text-align: unset !important;
+    }
+    .modal-opener {
+    line-height: 35px !important;
+    color: white;
+    text-align: center;
+    }
+    .modal-background {
+        display: none;
+        position: fixed;
+        z-index: 99999;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        right: 0%;
+        top: 0%;
+    }
+    .modal-content {
+        background-color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+         width: 30%;
+        margin: auto;
+        margin-top: 15%;
+        border-radius: 3px 3px 3px 3px;
+    }
+    .modal-message {
+        padding: 3%;
+        color: white;
+        background-color: #c00;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        border-radius: 3px 3px;
+
+    }
+    .modal-message-p {
+        font-size: 1.4rem;
+        margin-top: unset;
+    }
+    .modal-after-message {
+        padding: 3%;
+    }
+    .modal-after-message-button {
+        width: 100px;
+        height: 40px;
+        margin-top: 20px;
+        font-size: 15px;
+        background-color: #0082c5 !important;
+    }
+    .modal-after-message-span {
+        padding: 10px 22px 10px;
+        line-height: 80px;
+    }
+    .close-button-separator {
+        float: right;
+        margin-right: 5%;
+
+    }
+    .close-button {
+        display: block;
+        position: fixed;
+        width: 32px;
+        height: 32px;
+        transition: transform .25s ease-in-out;
+    }
+    .close-button:hover {
+        transform: rotate(180deg);
+    }
+    .close-button:before {
+        content: "";
+        position: absolute;
+        display: block;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 32px;
+        height: 0;
+        border-top: 1px solid white;
+        transform: rotate(45deg);
+        transform-origin: center;
+    }
+    .close-button:after {
+        content: "";
+        position: absolute;
+        display: block;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 32px;
+        height: 0;
+        border-top: 1px solid white;
+        transform: rotate(-45deg);
+        transform-origin: center;
+    }
+</style>
+
+</div>
+</div>
+                    <nav class="block category-tree-block block-105 category-menu-block menu-block category">
+
+                        <ul class="menu menu-level-1 category-menu"><li class="menu-item menu-item-170 menu-level-1-item has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                            <a data-id="170" data-level="1" class="menu-title menu-title-170 category-node menu-level-1-title has-children menu-title-has-children load-tree" title="Datorer">Datorer</a>
+
+
+                            <span class="toggle-static-child-menu toggle-child-menu"></span>
+                        </li>
+                            <li class="menu-item menu-item-1695 menu-level-1-item has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                                <a data-id="1695" data-level="1" class="menu-title menu-title-1695 category-node menu-level-1-title has-children menu-title-has-children load-tree" title="Datorutrustning">Datorutrustning</a>
+
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li>
+                            <li class="menu-item menu-item-544 menu-level-1-item has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                                <a data-id="544" data-level="1" class="menu-title menu-title-544 category-node menu-level-1-title has-children menu-title-has-children load-tree" title="GPS och Navigation">GPS och Navigation</a>
+
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li>
+                            <li class="menu-item menu-item-1626 menu-level-1-item has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                                <a data-id="1626" data-level="1" class="menu-title menu-title-1626 category-node menu-level-1-title has-children menu-title-has-children load-tree" title="Övervakningssystem">Övervakningssystem</a>
+
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li>
+                            <li class="menu-item menu-item-1186 menu-level-1-item has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                                <a data-id="1186" data-level="1" class="menu-title menu-title-1186 category-node menu-level-1-title has-children menu-title-has-children load-tree" title="Elektronik">Elektronik</a>
+
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li>
+                            <li class="menu-item menu-item-1083 menu-level-1-item has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                                <a data-id="1083" data-level="1" class="menu-title menu-title-1083 category-node menu-level-1-title has-children menu-title-has-children load-tree" title="Tillbehör">Tillbehör</a>
+
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li>
+                            <li class="menu-item menu-item-1673 menu-level-1-item no-children" data-level="1">
+                                <a href="/category/smarta-klockor" data-id="1673" data-level="1" class="menu-title menu-title-1673 category-node menu-level-1-title no-children open-page" title="SMARTA KLOCKOR">SMARTA KLOCKOR</a>
+
+
+
+                            </li>
+                            <li class="menu-item menu-item-1635 menu-level-1-item has-children menu-item-has-children" data-level="1">
+                                <a href="/category/begagnade-produkter" data-id="1635" data-level="1" class="menu-title menu-title-1635 category-node menu-level-1-title has-children menu-title-has-children open-page" title="Begagnade Produkter">Begagnade Produkter</a>
+
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li>
+                            <li class="menu-item menu-item-190 menu-level-1-item has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                                <a data-id="190" data-level="1" class="menu-title menu-title-190 category-node menu-level-1-title has-children menu-title-has-children load-tree" title="Multimedia">Multimedia</a>
+
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li>
+                            <li class="menu-item menu-item-887 menu-level-1-item has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                                <a data-id="887" data-level="1" class="menu-title menu-title-887 category-node menu-level-1-title has-children menu-title-has-children load-tree" title="Deltaco-produkter">Deltaco-produkter</a>
+
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li>
+                            <li class="menu-item menu-item-49 menu-level-1-item has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                                <a data-id="49" data-level="1" class="menu-title menu-title-49 category-node menu-level-1-title has-children menu-title-has-children load-tree" title="Programvara">Programvara</a>
+
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li>
+                            <li class="menu-item menu-item-1050 menu-level-1-item has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                                <a data-id="1050" data-level="1" class="menu-title menu-title-1050 category-node menu-level-1-title has-children menu-title-has-children load-tree" title="TV &amp; Projektorer">TV &amp; Projektorer</a>
+
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li>
+                            <li class="menu-item menu-item-187 menu-level-1-item menu-item-has-children-loaded selected has-children menu-item-has-children menu-item-has-title-without-link" data-level="1">
+                                <a data-id="187" data-level="1" class="menu-title menu-title-187 category-node menu-level-1-title has-children menu-title-has-children load-tree selected" title="Utförsäljning">Utförsäljning</a>
+
+                                <ul class="menu menu-level-2" data-level="2">
+
+                                    <li class="menu-item menu-item-481 menu-level-2-item no-children" data-level="2">
+                                        <a href="/category/rea-produkter" data-id="481" data-level="2" class="menu-title menu-title-481 category-node menu-level-2-title no-children open-page" title="REA-Produkter">REA-Produkter</a>
+
+
+
+                                    </li>
+                                    <li class="menu-item menu-item-793 menu-level-2-item no-children" data-level="2">
+                                        <a href="/category/begagnat" data-id="793" data-level="2" class="menu-title menu-title-793 category-node menu-level-2-title no-children open-page" title="Begagnat">Begagnat</a>
+
+
+
+                                    </li>
+                                    <li class="menu-item menu-item-239 menu-level-2-item no-children" data-level="2">
+                                        <a href="/category/utforsaljning-3" data-id="239" data-level="2" class="menu-title menu-title-239 category-node menu-level-2-title no-children open-page" title="Utförsäljning">Utförsäljning</a>
+
+
+
+                                    </li>
+                                    <li class="menu-item menu-item-1082 menu-level-2-item no-children" data-level="2">
+                                        <a href="/category/utgaende-produkter" data-id="1082" data-level="2" class="menu-title menu-title-1082 category-node menu-level-2-title no-children open-page" title="Utgående produkter">Utgående produkter</a>
+
+
+
+                                    </li>
+                                    <li class="menu-item menu-item-1018 menu-level-2-item no-children" data-level="2">
+                                        <a href="/category/var-rea-2015" data-id="1018" data-level="2" class="menu-title menu-title-1018 category-node menu-level-2-title no-children open-page" title="VÅR-REA 2015">VÅR-REA 2015</a>
+
+
+
+                                    </li>
+                                </ul>
+
+                                <span class="toggle-static-child-menu toggle-child-menu"></span>
+                            </li></ul>
+
+                        <div class="block search-block block-91 searchfield">
+                            <!-- We want to use this svg for the search logo
+
+                            <svg aria-hidden="true" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+
+                            -->
+
+                            <h3>Sök</h3>
+                            <div class="content">
+                                <form action="/search" method="get" >
+                                    <div class="field-wrap search-type required">
+                                        <label for="search-field-block-91" class="caption"><span>Sök produkter & kategorier</span></label>
+                                        <div class="control">
+                                            <input type="search" name="q" id="search-field-block-91" class="autocomplete" value="" placeholder="Sök" />
+                                        </div>
+                                    </div>
+                                    <button type="submit"><span>Sök</span></button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </nav>
+                    <div class="region last-region has-menu-block has-ace-text-block has-cart-block has-search-block" data-region="header" >
+
+
+        <script type="text/x-mustache" id="nodesPartialTmpl">
+    {{#nodes}}
+        {{^hidden}}
+            <li class="menu-item menu-item-{{nodeId}} menu-level-{{nodeLevel}}-item {{cssClasses}}{{#dynamicNode}} dynamic-menu-item{{/dynamicNode}}{{#hasChildren}} menu-item-has-children{{/hasChildren}}"
+                data-id="{{nodeId}}"
+                data-level="{{nodeLevel}}"
+            >
+                <a href="{{permalink}}" {{#newWindow}}target="_blank"{{/newWindow}} title="{{value}}"
+                    class="menu-title menu-title-{{nodeId}} menu-level-{{nodeLevel}}-title {{cssClasses}}{{#dynamicNode}} dynamic-menu-title{{/dynamicNode}}{{#hasChildren}} menu-title-has-children{{/hasChildren}}"
+                    data-level="{{nodeLevel}}"
+                >{{value}}</a>
+
+                {{#hasChildren}}
+                    <ul class="menu menu-level-{{childNodeLevel}}" data-level="{{childNodeLevel}}">
+                        {{>nodesPartial}}
+                    </ul>
+
+                    <span class="{{#dynamicNode}}toggle-dynamic-child-menu{{/dynamicNode}}{{^dynamicNode}}toggle-static-child-menu{{/dynamicNode}} toggle-child-menu"></span>
+                {{/hasChildren}}
+
+            </li>
+        {{/hidden}}
+    {{/nodes}}
+</script>
+    <script type="text/x-mustache" id="menuTreeTmpl">
+            {{>nodesPartial}}
+        </script>
+<script type="text/x-mustache" id="cartTmpl">
+        <div class="cart-wrap{{#hasItems}} cart-has-items{{/hasItems}}{{^hasItems}} empty-cart{{/hasItems}}">
+
+            <a class="header cart-header" href="/checkout">
+                <span class="cart-title">Kundvagn</span>
+                <span class="cart-item-count quantity"><span class="number">{{itemCount}}</span><span class="unit">st</span></span>
+                <span class="cart-sum-label">Totalt</span>
+                {{{totalPriceSumHtml}}}
+                <span class="cart-icon" data-item-count="{{itemCount}}"></span>
+            </a>
+
+            <div class="cart-content">
+                {{^items}}
+                    <span class="empty-cart-message">Kundvagnen är tom.</span>
+                                            {{#dbCart}}
+                            {{^isSaved}}
+                                <span class="db-cart-message"><a href="/customer?redirect=%2F">Logga in</a> för att hämta en sparad kundvagn.</span>
+                            {{/isSaved}}
+                        {{/dbCart}}
+                                    {{/items}}
+                {{#hasItems}}
+                    {{#dbCart}}
+                        {{#isSaved}}
+                            <span class="db-cart-message">Din kundvagn är sparad.</span>
+                        {{/isSaved}}
+                                                    {{^isSaved}}
+                                <span class="db-cart-message"><a href="/customer?redirect=%2F">Logga in</a> för att spara din kundvagn.</span>
+                            {{/isSaved}}
+                                            {{/dbCart}}
+                {{/hasItems}}
+                <ul class="items shopping-cart">
+                {{#items}}
+
+                    <li class="cart-item shopping-cart-item" data-id-hash="{{idHash}}">
+                        {{#productUrl}}<a href="{{productUrl}}">{{/productUrl}}
+                            <h3 title="{{fullName}}">{{name}}</h3>
+                            <h4>{{#hasVariants}}<span class="variant">{{concatAttributeValues}}</span>{{/hasVariants}}{{#stockStatusText}}<span class="stock-status">{{stockStatusText}}</span>{{/stockStatusText}}{{#displaySku}}<span class="sku" data-title="Artikelnr:">{{sku}}</span>{{/displaySku}}</h4>
+                        {{#productUrl}}</a>{{/productUrl}}
+                        <p class="info cart-item-info">
+                            <span class="quantity"><span class="number">{{quantity}}</span><span class="unit"><abbr title="{{unitName}}">{{unitSymbol}}</abbr></span></span>
+                            {{{totalPriceHtml}}}
+                        </p>
+                        <button type="button" title="Ta bort" class="remove-item-action"><span>&times;</span></button>
+                    </li>
+                {{/items}}
+                    <li class="cart-subtotal shopping-cart-subtotal">
+                        <span class="caption">Totalt</span>
+                        {{{totalPriceSumHtml}}}
+                    </li>
+                </ul>
+                <p class="footer cart-footer">
+                    <a href="#" class="cart-content-close">Stäng</a>
+                    <a href="/checkout" class="checkout-link">Till kassan</a>
+                </p>
+
+            </div><!-- /.cart-content -->
+        </div><!-- /.cart-wrap -->
+    </script>
+                    </div>
+                </div>
+                <a href="#menu" id="menu"></a>
+
+            </div><!-- .content -->
+        </div><!-- .wrapper -->
+    </header><!-- #site-header -->
+
+    <div id="content" class="site-content">
+
+        <main id="main-content" >
+
+        </main><!-- #main-content -->
+
+        
+            <div id="content-sidebar" class="sidebar region has-category-tree-block has-vat-selector-block" role="complementary" data-region="sidebar" >
+
+        <script type="text/x-mustache" id="categoriesPartialTmpl">
+    {{#nodes}}
+        <li class="menu-item menu-item-{{id}} menu-level-{{menuLevel}}-item{{#isOpen}} menu-item-has-children-loaded current-menu-ancestor open{{/isOpen}}{{#selected}} selected{{/selected}}{{^hasChildren}} no-children{{/hasChildren}}{{#hasChildren}} has-children menu-item-has-children{{/hasChildren}}{{^openPage}} menu-item-has-title-without-link{{/openPage}}"
+            data-level="{{menuLevel}}"
+        >
+            <a {{#openPage}}href="{{shopUrl}}"{{/openPage}}
+                data-id="{{id}}"
+                data-level="{{menuLevel}}"
+                class="menu-title menu-title-{{id}} category-node menu-level-{{menuLevel}}-title{{^hasChildren}} no-children{{/hasChildren}}{{#hasChildren}} has-children menu-title-has-children{{/hasChildren}}{{^openPage}} load-tree{{/openPage}}{{#openPage}} open-page{{/openPage}}{{#isOpen}} open{{/isOpen}}{{#selected}} selected{{/selected}}"
+                title="{{name}}"
+            >{{name}}</a>
+
+            {{#isOpen}}
+                <ul class="menu menu-level-{{menuNextLevel}}" data-level="{{menuNextLevel}}">
+                    {{>categoriesPartial}}
+                </ul>
+            {{/isOpen}}
+
+            {{#hasChildren}}<span class="toggle-static-child-menu toggle-child-menu"></span>{{/hasChildren}}
+        </li>
+    {{/nodes}}
+</script>
+    <script type="text/x-mustache" id="rootCategoriesTmpl">
+        {{>categoriesPartial}}
+    </script>
+    <div class="block vat-selector-block block-37">
+        <p>
+            Priser visas <a href="/index/set-selection?pricesInclVat=0&amp;redirectUrl=%2F" rel="nofollow" data-replace-current-url>inkl. moms</a>        </p>
+    </div>
+
+
+            </div><!-- #content-sidebar -->
+        
+
+    </div><!-- #content -->
+
+    
+        <footer id="site-footer" class="region has-ace-text-block has-text-block" data-region="footer" >
+            <div class="wrapper">
+                <div class="content">
+
+                    <div class="block ace-text-block block-111">
+    <hr style="margin-top: -2%;">
+</div>
+<div class="block ace-text-block block-130">
+    <div class="footer-top">
+<div class="block newsletter-block block-40 nyhetsbrev newsletter-signup-block">
+        <h3>Nyhetsbrev</h3>
+        <div class="content">
+            <div class="field-wrap email-type required">
+                <label for="newsletter-email-40-field" class="caption"><span>E-post</span></label>
+                <div class="control">
+                    <input type="email" name="email" class="newsletter-email-field" id="newsletter-email-40-field" required="" aria-required="true" placeholder="Skriv in din e-postadress">
+                </div>
+            </div>
+            <button type="button" class="newsletter-subscribe-button"><span>Prenumerera</span></button>
+        </div>
+    </div>
+    </div>
+</div>
+    <div class="block text-block block-122 one-column-text-block one column-content" >
+                <div class="column">
+            <fieldset class="information">
+<legend>Information</legend><hr class="information-hr">
+<center>
+<figure class="information-figure" style="display: inline-flex; width: 100%; margin-top: 2%; margin-bottom: 2%;">
+<div class="information-text"><a href="https://www.data-butiken.com/customer-service"><img class="information-img" src="https://cdn.starwebserver.se/shops/data-butiken/files/kontakta-oss-2.png?_=1518302549" height="133" width="133" style="
+    width: 71px;
+    height: 71px;
+"><p>Kontakta oss</p></a></div>
+<div class="information-text">
+<a href="https://www.google.se/maps/place/Data+store+in+Karlstad,+Frödingshöjd+20,+656+37+Karlstad,+Sweden/@59.4099321,13.5774923,16z/data=!4m2!3m1!1s0x465cb133119904c3:0x372597d7dad0f777">
+<img class="information-img" src="https://cdn.starwebserver.se/shops/data-butiken/files/hitta-till-oss-2.png?_=1518302553" height="133" width="133" style="width: 71px; height: 71px;">
+<p>Hitta till oss</p>
+</a></div>
+<div class="information-text">
+<img class="information-img" src="https://cdn.starwebserver.se/shops/data-butiken/files/cache/vanliga-fragor-och-svar_tiny.png?_=1518267250" height="133" width="133" style="width: 71px; height: 71px;">
+<p>Frågor & svar</p>
+</div>
+<div class="information-text">
+<a href="https://www.data-butiken.com/page/kopvillkor?previewing">
+<img class="information-img" src="https://cdn.starwebserver.se/shops/data-butiken/files/kopvilkor-2.png?_=1518302546" height="133" width="133" style="width: 71px; height: 71px;">
+<p>Köpvillkor</p>
+</a>
+</div>
+<div class="information-text">
+<a href="/page/om-databutiken">
+<img class="information-img" src="https://cdn.starwebserver.se/shops/data-butiken/files/om-data-butiken-2.png?_=1518302540" height="133" width="133" style="width: 71px; height: 71px;">
+<p>Om Data-Butiken</p>
+</a>
+</div>
+</figure>
+</center>
+</fieldset>
+<hr class="information-hr">
+        </div>
+            </div>
+    <div class="block text-block block-124 one-column-text-block one column-content" >
+                <div class="column">
+            <div style="text-align: center;">
+<div class="certs">
+    <div class="certs-sub">
+        <fieldset class="social-fieldset">
+<img src="https://image.ibb.co/etx9Ln/mv_facebook.png" class="social-fb">
+<hr class="information-hr">
+<img src="https://www.ehandelscertifiering.se/lv5/logotyp.php?size=75&bg=&lang=sv&url=www.data-butiken.com" class="social-cert">
+<hr class="information-hr">
+        </fieldset>
+    </div>
+<img src="https://smartinthedark.com/sitd/wp-content/uploads/2016/10/betallosningar-2.png" class="social-klarna">
+<hr class="information-hr" style="margin-top: 260px;">
+    
+    <div class="certs-ship">
+<fieldset class="certs-fieldset"><legend>Fraktsätt</legend>
+<img src="https://cdn.starwebserver.se/shops/data-butiken/files/postnord.png?_=1518360759" class="certs-ship-img" style="
+    margin: auto;
+    height: 40px;
+    width: 180px;
+"><br class="information-hr"><img class="certs-ship-img" src="https://image.ibb.co/jdKVbS/7_1.jpg" style="margin: auto;margin-top: 2%;width: 180px;height: 35px;">
+<hr class="information-hr">
+    </fieldset>
+                                                                                                                          </div>
+</div>
+</div>
+        </div>
+            </div>
+    <div class="block text-block block-49 one-column-text-block one column-content" >
+                <div class="column">
+            <p style="text-align: center" class="copyright">Copyright &copy; Databutiken i Karlstad</p>
+        </div>
+            </div>
+
+
+                    <div class="software-by-starweb"><a href="https://www.starweb.se/starta-webshop/" title="Starta webshop hos Starweb" target="_blank" ><i>Webshop från Starweb</i></a></div>
+
+                </div><!-- .content -->
+            </div><!-- .wrapper -->
+        </footer><!-- #site-footer -->
+    
+
+    
+        <div id="mobile-nav" class="region " role="contentinfo" data-region="mobileNav" >
+            
+        </div>
+    
+
+</div><!-- #page-container -->
+
+                <div id="sw-confirm">
+    <div class="sw-confirm-overlay"></div>
+    <div class="sw-confirm-content">
+        <span class="icon"></span>
+        <div class="sw-confirm-message"></div>
+        <div class="sw-confirm-buttons">
+            <button type="button" class="sw-confirm-no">Avbryt</button>
+            <button type="button" class="sw-confirm-yes">Okej</button>
+        </div>
+    </div>
+</div>
+        <!-- Discount code -->
+
+                                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"
+             integrity="sha384-XxcvoeNF5V0ZfksTnV+bejnCsJjOOIzN6UVwF85WBsAnU3zeYh5bloN+L4WLgeNE"
+             crossorigin="anonymous"></script>
+            <script>window.jQuery || document.write('<script src="//cdn.starwebserver.se/6600/js/lib/jquery-1.12.0.min.js"><\/script>')</script>
+         
+        <!--[if IE]>
+            <script src="//cdn.starwebserver.se/6600/js/lib/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+                <script src="//cdn.starwebserver.se/6600/js/shop/shop.combined.min.js"></script>
+
+                
+                
+        <script>
+            var warningPageHasUnsavedChangesText = 'Du har osparade ändringar. Lämnar du sidan innan du sparat kommer dessa ändringar att förloras.',
+                errorActionRequestFailedText = 'Anropet misslyckades. Försök igen senare.',
+                primaryLangCode = 'sv',
+                currentLangCode = 'sv',
+                currentLangCodeHasHostnameDefault = Boolean(),
+                subdomainHostnameUrl = 'https://data-butiken.starwebserver.se'
+           ;
+        </script>
+
+                    <script src="../staticFiles/theme-plugins.combined.min.js"></script>
+                    <script src="../staticFiles/theme.min.js"></script>
+                    <script src="../customFiles/shop-custom.min.js"></script>
+                
+        
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e4a543a19a","applicationID":"21653131","transactionName":"MgNUMBBSWhVSUkJdWAtJdRERR1sLHGJeW0dKD1gAB0sbD11VU0w=","queueTime":0,"applicationTime":380,"atts":"HkRDRlhISUoRUBQOTBgb","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+<!-- 0.379s -->

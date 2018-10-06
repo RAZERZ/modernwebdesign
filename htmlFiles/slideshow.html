@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slideshow</title>
+</head>
+<body>
+
+<style>
+    .slideshow-container {
+        position: relative;
+    }
+    
+    .slideshow-controls {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        -webkit-transform: translate(-50%, 0%);
+        -moz-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        -o-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+        color: #fff;
+        text-align: center;
+    }
+
+    .slideshow-btn {
+        float: left;
+        position: absolute;
+        font-size: 200%;
+        bottom: 45%;
+        color: white;
+        cursor: pointer;
+    }
+
+    .btn-left:hover {
+        color: grey;
+    }
+
+    .btn-right {
+        right: 0;
+    }
+
+    .btn-right:hover {
+        color: grey;
+    }
+
+    .slideshow-imgIndexCircle {
+        height: 13px;
+        width: 13px;
+        background-color: transparent;
+        border: 1px solid #ccc;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        font-size: 18px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .slideshow-imgIndexCircle:hover {
+        background-color: #ccc;
+    }
+
+    .currIndexWhite {
+        background-color: white;
+    }
+
+    .animate-opacity {
+        animation:opac 0.8s
+    }
+    @keyframes opac {
+        from {
+            opacity:0
+        }
+        to {
+            opacity:1
+        }
+    }
+
+</style>
+
+<div class="slideshow-container" style="max-width:800px">
+    <img class="imgSlide animate-opacity" src="https://www.w3schools.com/w3css/img_nature_wide.jpg" style="width:100%">
+    <img class="imgSlide animate-opacity" src="https://www.w3schools.com/w3css/img_snow_wide.jpg" style="width:100%">
+    <img class="imgSlide animate-opacity" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg" style="width:100%">
+    <div class="slideshow-btn btn-left" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="slideshow-btn btn-right" onclick="plusDivs(1)">&#10095;</div>
+    <div class="slideshow-controls" style="width:100%">
+        <span class="slideshow-imgIndexCircle" onclick="currentDiv(1)"></span>
+        <span class="slideshow-imgIndexCircle" onclick="currentDiv(2)"></span>
+        <span class="slideshow-imgIndexCircle" onclick="currentDiv(3)"></span>
+    </div>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+        clearInterval(intervalId);
+    }
+
+    function showDivs(n) {
+        var i;
+        var imgs = document.getElementsByClassName("imgSlide");
+        var dots = document.getElementsByClassName("slideshow-imgIndexCircle");
+        if (n > imgs.length) {
+            slideIndex = 1
+        }
+
+        if (n < 1) {
+            slideIndex = imgs.length
+        }
+        
+        for (i = 0; i < imgs.length; i++) {
+            imgs[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" currIndexWhite", "");
+        }
+        imgs[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " currIndexWhite";
+    }
+
+    var intervalId = setInterval(function() {showDivs(slideIndex+=1)}, 4000);
+
+</script>
+
+</body>
+</html>

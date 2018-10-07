@@ -78,18 +78,63 @@
         }
     }
 
+    .slideshow-amdGaming {
+        position: absolute;
+        top: 10%;
+        right: 0;
+        width: 200px;
+    }
+
+    .slideshow-amdGaming:hover {
+        width: 210px;
+    }
+
+    .slideshow-intelGaming {
+        position: absolute;
+        top: 10%;
+        width: 275px;
+        left: -5%;
+    }
+
+    .slideshow-intelGaming:hover {
+        width: 285px;
+    }
+
+    .slideshow-gamingPCText {
+        position: absolute;
+        top: 25%;
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
 </style>
 
 <div class="slideshow-container" style="max-width:800px">
-    <img class="imgSlide animate-opacity" src="https://www.w3schools.com/w3css/img_nature_wide.jpg" style="width:100%">
-    <img class="imgSlide animate-opacity" src="https://www.w3schools.com/w3css/img_snow_wide.jpg" style="width:100%">
-    <img class="imgSlide animate-opacity" src="https://www.w3schools.com/w3css/img_mountains_wide.jpg" style="width:100%">
+
+    <div class="animate-opacity imgSlide">
+        <img src="https://cdn.starwebserver.se/shops/data-butiken/files/rgbbackground.jpg" style="width: 800px; height: 280px;">
+        <a href="https://www.data-butiken.com/category/databutiken-gaming-intel"><img src="https://cdn.starwebserver.se/shops/data-butiken/files/gamingdatoramd.png" class="slideshow-amdGaming"></a>
+        <img src="https://cdn.starwebserver.se/shops/data-butiken/files/whatdoyoubringtext.png" class="slideshow-gamingPCText">
+        <a href="https://www.data-butiken.com/category/databutiken-gaming-intel"><img src="https://cdn.starwebserver.se/shops/data-butiken/files/gamingdatorintel.png" class="slideshow-intelGaming"></a>
+    </div>
+    <a href="https://www.data-butiken.com/category/ip-cmaera-bevaknings-sytem"><img class="imgSlide animate-opacity" src="https://cdn.starwebserver.se/shops/data-butiken/files/banners1-tvi-2_dup1.jpg" style="width:800px;"></a>
+    <a href="https://www.data-butiken.com/category/dvd-for-vw-2"><img class="imgSlide animate-opacity" src="https://cdn.starwebserver.se/shops/data-butiken/files/dabseries_webbanner.jpg" style="width:800px"></a>
+    <a href="https://www.data-butiken.com/category/msi-2"><img class="imgSlide animate-opacity" src="https://cdn.starwebserver.se/shops/data-butiken/files/gaminglaptops.png"></a>
+    <a href="https://www.data-butiken.com/category/gamingtillbehor-tangentbord"><img class="imgSlide animate-opacity" src="https://cdn.starwebserver.se/shops/data-butiken/files/gamingextras.png"></a>
+    <a href="https://www.data-butiken.com/category/dvd-for-benz-2"><img class="imgSlide animate-opacity" src="https://cdn.starwebserver.se/shops/data-butiken/files/freedashcambanner.png" style="width: 800px; height: auto;"></a>
+
     <div class="slideshow-btn btn-left" onclick="plusDivs(-1)">&#10094;</div>
     <div class="slideshow-btn btn-right" onclick="plusDivs(1)">&#10095;</div>
     <div class="slideshow-controls" style="width:100%">
         <span class="slideshow-imgIndexCircle" onclick="currentDiv(1)"></span>
         <span class="slideshow-imgIndexCircle" onclick="currentDiv(2)"></span>
         <span class="slideshow-imgIndexCircle" onclick="currentDiv(3)"></span>
+        <span class="slideshow-imgIndexCircle" onclick="currentDiv(4)"></span>
+        <span class="slideshow-imgIndexCircle" onclick="currentDiv(5)"></span>
+        <span class="slideshow-imgIndexCircle" onclick="currentDiv(6)"></span>
     </div>
 </div>
 
